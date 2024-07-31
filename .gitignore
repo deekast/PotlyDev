@@ -35,3 +35,6 @@ ios/
 
 # typescript
 *.tsbuildinfo
+
+
+GoogleService-Info.plist

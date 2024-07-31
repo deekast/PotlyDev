@@ -1,5 +1,3 @@
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { Drawer } from 'expo-router/drawer';
 import { DarkTheme, ThemeProvider } from '@react-navigation/native';
 import { useColorScheme } from 'nativewind';
 import "../global.css";
@@ -7,8 +5,9 @@ import { MyLightTheme } from '../utilities/themeOptions';
 import { useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
+import { Slot } from 'expo-router';
 
-export default function Layout() { 
+export default function RootLayout() { 
 
   const {colorScheme, setColorScheme} = useColorScheme();
   useEffect(() => {
@@ -28,31 +27,7 @@ export default function Layout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : MyLightTheme}>
-      <GestureHandlerRootView className= 'flex-1'>
-        <Drawer>
-        <Drawer.Screen
-            name="(tabs)" // This is the name of the page and must match the url from root
-            options={{
-              drawerLabel: 'Home',
-              title: '',
-            }}
-          />
-          <Drawer.Screen
-            name="pots" // This is the name of the page and must match the url from root
-            options={{
-              drawerLabel: 'Pots',
-              title: 'Pots',
-            }}
-          />
-          <Drawer.Screen
-            name="settings" // This is the name of the page and must match the url from root
-            options={{
-              drawerLabel: 'Settings',
-              title: 'Settings',
-            }}
-          />
-        </Drawer>
-      </GestureHandlerRootView>
+        <Slot />
     </ThemeProvider>
   );
 }
