@@ -27,8 +27,17 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-font"
     ],
-    "scheme": "potlydev"
+    "scheme": "potlydev",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "2c876361-aa4b-4ebe-a8ba-c3668341bd8e"
+      }
+    }
   }
 }

@@ -6,6 +6,7 @@ import "../global.css";
 import { MyLightTheme } from '../utilities/themeOptions';
 import { useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Inter_900Black, useFonts } from '@expo-google-fonts/inter';
 
 export default function Layout() { 
 
