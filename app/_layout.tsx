@@ -9,6 +9,8 @@ import { Slot } from 'expo-router';
 
 export default function RootLayout() { 
 
+  console.log("RootLayout");
+
   const {colorScheme, setColorScheme} = useColorScheme();
   useEffect(() => {
     const loadTheme = async () => {

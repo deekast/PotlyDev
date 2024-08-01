@@ -12,12 +12,20 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="add-pot"
+        options={{
+          title: 'Add Pot',
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="plus" color="green" />,
+        }}
+      />
+      <Tabs.Screen
         name="profile"
         options={{
           title: 'Profile',
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
         }}
       />
+
     </Tabs>
   );
 }

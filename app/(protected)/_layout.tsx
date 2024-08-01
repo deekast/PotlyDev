@@ -7,6 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { ActivityIndicator, Alert } from "react-native";
 
 export default function Layout() {
+  console.log("protected Layout");
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
   const [loading, setLoading] = useState(true);
